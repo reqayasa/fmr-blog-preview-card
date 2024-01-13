@@ -1,0 +1,143 @@
+:root {
+    --col-primary-400: hsl(47 88% 63%);
+
+    --col-neutral-100: hsl(0 0% 100%);
+    --col-neutral-400: hsl(0 0% 50%);
+    --col-neutral-900: hsl(0 0% 7%);
+
+    --font-family: Figtree, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--col-neutral-900);
+    margin: 0;
+    padding: 0;
+    background: var(--col-primary-400);
+}
+
+p {
+    text-wrap: balance;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.design-overlay {
+    /* background: url("../../public/mobile-design.jpg"); */
+    background: url("../../public/desktop-design.jpg");
+    opacity: 0.5;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 1.5rem;
+    /* padding-top: 9.7rem; */
+    padding-top: 13.6rem;
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--col-neutral-100);
+    border: 1.5px solid var(--col-neutral-900);
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    max-width: 100%;
+    gap: 1rem;
+    box-shadow: 0.5rem 0.5rem var(--col-neutral-900);
+    max-width: 21rem;
+
+    /* .card */
+    & .img > img {
+        height: 12.5rem;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+    }
+
+    & .tag {
+        margin-top: 0.25rem;
+
+        & a {
+            background: var(--col-primary-400);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.75rem;
+            padding: 0.5em;
+            padding-inline: 1em;
+            border-radius: 0.5em;
+        }
+    }
+
+    /* .card */
+    & .date {
+        /* margin-top: 1rem; */
+    }
+
+    /* .card */
+    & .title {
+        /* margin-top: 1rem; */
+        letter-spacing: 0.5px;
+        font-size: 1.2rem;
+        font-weight: 800;
+
+        & a:hover,
+        & a:focus {
+            color: var(--col-primary-400)
+        }
+
+    }
+
+    /* .card */
+    & .description {
+        /* margin-top: 1rem; */
+        color: var(--col-neutral-400);
+    }
+
+    /* .card */
+    & .author {
+        /* margin-top: 1rem; */
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1rem;
+
+        & img {
+            height: 2rem;
+            width: 2rem;
+            object-fit: cover;
+            /* border-radius: 0.5rem; */
+        }
+
+        & p {
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+    }
+}
