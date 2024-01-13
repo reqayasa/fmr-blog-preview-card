@@ -22,7 +22,7 @@ body {
 }
 
 p {
-    text-wrap: balance;
+    /* text-wrap: balance; */
     line-height: 1.2;
     margin: 0;
     padding: 0;
@@ -35,8 +35,8 @@ h1 {
     font-size: 1rem;
 }
 
-.design-overlay {
-    /* background: url("../../public/mobile-design.jpg"); */
+/* .design-overlay {
+    background: url("../../public/mobile-design.jpg");
     background: url("../../public/desktop-design.jpg");
     opacity: 0.5;
     position: absolute;
@@ -46,19 +46,15 @@ h1 {
     padding: 0;
     top: 0;
     left: 0;
-}
+} */
 
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    padding: 1.5rem;
-    /* padding-top: 9.7rem; */
-    padding-top: 13.6rem;
-    /* width: 100vw; */
-    /* height: 100vh; */
+    padding-inline: 1.5rem;
+    height: 100vh;
 }
 
 .card {
@@ -70,6 +66,7 @@ main {
     padding: 1.5rem;
     max-width: 100%;
     gap: 1rem;
+    gap: clamp(1rem, 0.9647887323943661rem + 0.1502347417840377vw, 1.1rem);
     box-shadow: 0.5rem 0.5rem var(--col-neutral-900);
     max-width: 21rem;
 
@@ -82,15 +79,18 @@ main {
     }
 
     & .tag {
-        margin-top: 0.25rem;
+        /* margin-top: 0.25rem; */
+        margin-top: 0.5rem;
 
         & a {
             background: var(--col-primary-400);
             text-decoration: none;
             font-weight: 800;
             font-size: 0.75rem;
+            font-size: clamp(0.75rem, 0.6971830985915493rem + 0.22535211267605634vw, 0.9rem);
             padding: 0.5em;
-            padding-inline: 1em;
+            /* padding-inline: 0.5em; */
+            padding-inline: 0.75em;
             border-radius: 0.5em;
         }
     }
@@ -98,14 +98,20 @@ main {
     /* .card */
     & .date {
         /* margin-top: 1rem; */
+        font-size: 0.9rem;
     }
 
     /* .card */
     & .title {
         /* margin-top: 1rem; */
-        letter-spacing: 0.5px;
+        /* letter-spacing: 0.5px; */
         font-size: 1.2rem;
+        font-size: clamp(1.2rem, 1.0943661971830985rem + 0.4507042253521127vw, 1.5rem);
         font-weight: 800;
+
+        /* @media (min-width: 500px) {
+            font-size: 1.5rem;
+        } */
 
         & a:hover,
         & a:focus {
@@ -118,6 +124,7 @@ main {
     & .description {
         /* margin-top: 1rem; */
         color: var(--col-neutral-400);
+        line-height: 1.5;
     }
 
     /* .card */
@@ -126,7 +133,7 @@ main {
         display: flex;
         align-items: center;
         gap: 0.75rem;
-        margin-top: 1rem;
+        margin-top: 0.2rem;
 
         & img {
             height: 2rem;
@@ -139,5 +146,29 @@ main {
             font-size: 0.85rem;
             font-weight: 800;
         }
+    }
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    color: var(--col-neutral-400);
+    font-size: 0.75rem;
+    background: var(--col-primary-400);
+
+    @media (max-width: 375px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    & a {
+        color: var(--col-neutral-100);
+    }
+    
+    & a:hover, a:active {
+        color: var(--col-neutral-900);
     }
 }
